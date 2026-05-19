@@ -6,10 +6,14 @@
 <title>NightStar Labs</title>
 
 <style>
+*{
+box-sizing:border-box;
+}
+
 body{
 margin:0;
-font-family:Arial,sans-serif;
-background:#0a0a14;
+font-family:Inter, Arial, sans-serif;
+background:#050712;
 color:white;
 }
 
@@ -17,101 +21,215 @@ nav{
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:20px 50px;
-background:#111827;
+padding:22px 8%;
+background:rgba(5,7,18,0.85);
+border-bottom:1px solid rgba(59,130,246,0.2);
+position:sticky;
+top:0;
+z-index:10;
+backdrop-filter:blur(10px);
 }
 
 .logo{
 display:flex;
 align-items:center;
-gap:15px;
-font-size:24px;
-font-weight:bold;
+gap:14px;
+font-size:22px;
+font-weight:800;
+letter-spacing:.5px;
 }
 
 .logo img{
 width:50px;
 height:50px;
 border-radius:50%;
+box-shadow:0 0 25px rgba(59,130,246,0.5);
 }
 
 nav a{
 color:#cbd5e1;
 text-decoration:none;
-margin-left:20px;
+margin-left:28px;
+font-weight:600;
+}
+
+nav a:hover{
+color:#60a5fa;
 }
 
 .hero{
-min-height:85vh;
+min-height:88vh;
 display:flex;
-flex-direction:column;
-justify-content:center;
 align-items:center;
-text-align:center;
-padding:20px;
-background:radial-gradient(circle at top, #1e3a8a, #0a0a14 55%);
+padding:80px 8%;
+background:
+radial-gradient(circle at 20% 20%, rgba(59,130,246,.35), transparent 30%),
+radial-gradient(circle at 80% 10%, rgba(124,58,237,.25), transparent 28%),
+linear-gradient(135deg,#050712 0%,#0b1022 50%,#020617 100%);
+position:relative;
+overflow:hidden;
+}
+
+.hero::after{
+content:"";
+position:absolute;
+inset:0;
+background-image:
+radial-gradient(white 1px, transparent 1px);
+background-size:80px 80px;
+opacity:.08;
+}
+
+.hero-content{
+position:relative;
+z-index:1;
+max-width:850px;
+}
+
+.badge{
+display:inline-block;
+padding:10px 16px;
+border:1px solid rgba(96,165,250,.4);
+border-radius:999px;
+color:#93c5fd;
+background:rgba(15,23,42,.7);
+font-size:14px;
+font-weight:700;
+margin-bottom:24px;
 }
 
 .hero h1{
-font-size:55px;
-margin-bottom:10px;
+font-size:72px;
+line-height:1;
+margin:0 0 24px;
+letter-spacing:-2px;
+}
+
+.hero h1 span{
+color:#60a5fa;
+text-shadow:0 0 30px rgba(59,130,246,.6);
 }
 
 .hero p{
-font-size:20px;
-max-width:650px;
+font-size:22px;
+max-width:720px;
 color:#cbd5e1;
-line-height:1.6;
+line-height:1.7;
+margin-bottom:34px;
 }
 
-.button{
-margin-top:25px;
-padding:15px 30px;
-background:#3b82f6;
-color:white;
-text-decoration:none;
-border-radius:10px;
-font-weight:bold;
-display:inline-block;
-}
-
-section{
-padding:60px 50px;
-text-align:center;
-}
-
-.cards{
+.buttons{
 display:flex;
-justify-content:center;
-gap:20px;
+gap:16px;
 flex-wrap:wrap;
 }
 
+.button{
+padding:15px 26px;
+background:#3b82f6;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:800;
+box-shadow:0 0 30px rgba(59,130,246,.35);
+}
+
+.button.secondary{
+background:transparent;
+border:1px solid rgba(148,163,184,.35);
+box-shadow:none;
+color:#cbd5e1;
+}
+
+section{
+padding:80px 8%;
+}
+
+.section-title{
+font-size:36px;
+margin-bottom:14px;
+}
+
+.section-text{
+color:#94a3b8;
+max-width:680px;
+line-height:1.7;
+font-size:18px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:22px;
+margin-top:35px;
+}
+
 .card{
-background:#111827;
-padding:25px;
-max-width:300px;
-border-radius:15px;
-border:1px solid #1f2937;
+background:linear-gradient(180deg,rgba(17,24,39,.95),rgba(15,23,42,.95));
+padding:28px;
+border-radius:20px;
+border:1px solid rgba(59,130,246,.18);
+box-shadow:0 15px 40px rgba(0,0,0,.25);
+}
+
+.card h3{
+margin-top:0;
+font-size:22px;
 }
 
 .card p{
 color:#cbd5e1;
-line-height:1.5;
+line-height:1.6;
 }
 
-.about{
-max-width:800px;
-margin:auto;
-color:#cbd5e1;
-line-height:1.7;
+.about-box{
+background:rgba(17,24,39,.65);
+border:1px solid rgba(59,130,246,.18);
+border-radius:24px;
+padding:36px;
+max-width:900px;
+}
+
+.contact{
+background:linear-gradient(135deg,rgba(30,58,138,.35),rgba(15,23,42,.9));
+text-align:center;
+}
+
+.contact p{
+margin:auto auto 28px;
 }
 
 footer{
-text-align:center;
-padding:25px;
-background:#111827;
-color:#94a3b8;
+padding:26px 8%;
+background:#020617;
+color:#64748b;
+border-top:1px solid rgba(59,130,246,.15);
+}
+
+@media(max-width:700px){
+nav{
+padding:18px 6%;
+}
+
+nav div:last-child{
+display:none;
+}
+
+.hero{
+padding:70px 6%;
+}
+
+.hero h1{
+font-size:46px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+section{
+padding:60px 6%;
+}
 }
 </style>
 </head>
@@ -132,61 +250,73 @@ color:#94a3b8;
 </nav>
 
 <section class="hero">
-<h1>Building Digital Solutions</h1>
+<div class="hero-content">
+
+<div class="badge">Web • Digital Setup • Future Tech</div>
+
+<h1>Technology built for <span>what comes next.</span></h1>
 
 <p>
-NightStar Labs creates websites and practical technology solutions
-while growing toward future work in IT, cybersecurity, automation, and software.
+NightStar Labs helps small businesses, creators, and organizations build a stronger digital presence through clean websites, practical setup support, and technology-focused solutions.
 </p>
 
-<a href="#contact" class="button">Contact Us</a>
+<div class="buttons">
+<a href="#contact" class="button">Start a Project</a>
+<a href="#services" class="button secondary">Explore Services</a>
+</div>
+
+</div>
 </section>
 
 <section id="services">
-<h2>Services</h2>
+<h2 class="section-title">What NightStar Labs Builds</h2>
+
+<p class="section-text">
+Starting with websites and digital setup, NightStar Labs focuses on practical work that helps real people and businesses look more professional online.
+</p>
 
 <div class="cards">
-<div class="card">
-<h3>Website Development</h3>
-<p>Clean, responsive websites for small businesses, organizations, and personal brands.</p>
-</div>
 
 <div class="card">
-<h3>Website Maintenance</h3>
-<p>Updates, improvements, and support to keep websites current and useful.</p>
+<h3>Web Design</h3>
+<p>Modern, responsive websites for small businesses, student groups, creators, and local brands.</p>
 </div>
 
 <div class="card">
 <h3>Digital Setup</h3>
-<p>Basic setup for domains, contact forms, online presence, and digital tools.</p>
+<p>Support with domains, contact forms, online profiles, basic tools, and getting a digital presence started.</p>
 </div>
+
+<div class="card">
+<h3>Maintenance</h3>
+<p>Website updates, content changes, improvements, and ongoing support as needs grow.</p>
+</div>
+
 </div>
 </section>
 
 <section id="about">
-<h2>About NightStar Labs</h2>
+<div class="about-box">
+<h2 class="section-title">About NightStar Labs</h2>
 
-<p class="about">
-NightStar Labs is a technology project focused on building real-world digital solutions.
-Starting with websites and digital setup, the goal is to develop practical experience,
-solve real problems, and grow into future work across IT, cybersecurity, automation,
-and software development.
+<p class="section-text">
+NightStar Labs is an early-stage technology brand built around learning by creating. The project began with a focus on websites and digital solutions, with a long-term vision of expanding into IT, cybersecurity, automation, and software development.
 </p>
+</div>
 </section>
 
-<section id="contact">
-<h2>Contact</h2>
+<section id="contact" class="contact">
+<h2 class="section-title">Start Something</h2>
 
-<p class="about">
-Interested in working with NightStar Labs or following the project?
-Reach out through the official contact email.
+<p class="section-text">
+Have a website idea, business project, or digital setup need? Reach out and connect with NightStar Labs.
 </p>
 
 <a href="mailto:hello.nightstarlabs@gmail.com" class="button">Email NightStar Labs</a>
 </section>
 
 <footer>
-<p>© 2026 NightStar Labs. All rights reserved.</p>
+<p>© 2026 NightStar Labs. Building solutions. Powering futures.</p>
 </footer>
 
 </body>
