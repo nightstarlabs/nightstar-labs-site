@@ -1,3 +1,5 @@
+hello.nightstarlabs@gmail.com
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +8,6 @@
 <title>NightStar Labs</title>
 
 <style>
-
 body{
 margin:0;
 font-family:Arial,sans-serif;
@@ -17,6 +18,7 @@ color:white;
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 50px;
 background:#111827;
 }
@@ -26,25 +28,33 @@ font-size:24px;
 font-weight:bold;
 }
 
+nav a{
+color:#cbd5e1;
+text-decoration:none;
+margin-left:20px;
+}
+
 .hero{
-height:85vh;
+min-height:85vh;
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
 text-align:center;
 padding:20px;
+background:radial-gradient(circle at top, #1e3a8a, #0a0a14 55%);
 }
 
 .hero h1{
-font-size:50px;
+font-size:55px;
 margin-bottom:10px;
 }
 
 .hero p{
 font-size:20px;
-max-width:600px;
+max-width:650px;
 color:#cbd5e1;
+line-height:1.6;
 }
 
 .button{
@@ -57,19 +67,44 @@ border-radius:10px;
 font-weight:bold;
 }
 
-.services{
-padding:50px;
+section{
+padding:60px 50px;
 text-align:center;
+}
+
+.cards{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
 }
 
 .card{
 background:#111827;
-margin:20px auto;
 padding:25px;
-max-width:500px;
+max-width:300px;
 border-radius:15px;
+border:1px solid #1f2937;
 }
 
+.card p{
+color:#cbd5e1;
+line-height:1.5;
+}
+
+.about{
+max-width:800px;
+margin:auto;
+color:#cbd5e1;
+line-height:1.7;
+}
+
+footer{
+text-align:center;
+padding:25px;
+background:#111827;
+color:#94a3b8;
+}
 </style>
 </head>
 
@@ -77,43 +112,71 @@ border-radius:15px;
 
 <nav>
 <div class="logo">NightStar Labs</div>
+
+<div>
+<a href="#services">Services</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
 </nav>
 
 <section class="hero">
-
 <h1>Building Digital Solutions</h1>
 
 <p>
-NightStar Labs creates websites and technology solutions
-while expanding toward IT, cybersecurity, and future innovation.
+NightStar Labs creates websites and practical technology solutions
+while growing toward future work in IT, cybersecurity, automation, and software.
 </p>
 
-<a href="#" class="button">
-Contact Us
-</a>
-
+<a href="#contact" class="button">Contact Us</a>
 </section>
 
-<section class="services">
-
+<section id="services">
 <h2>Services</h2>
 
+<div class="cards">
 <div class="card">
 <h3>Website Development</h3>
-<p>Custom websites for businesses and organizations.</p>
+<p>Clean, responsive websites for small businesses, organizations, and personal brands.</p>
 </div>
 
 <div class="card">
 <h3>Website Maintenance</h3>
-<p>Updates, hosting support, and digital management.</p>
+<p>Updates, improvements, and support to keep websites current and useful.</p>
 </div>
 
 <div class="card">
-<h3>Future Services</h3>
-<p>IT, cybersecurity, automation, and software solutions.</p>
+<h3>Digital Setup</h3>
+<p>Basic setup for domains, contact forms, online presence, and digital tools.</p>
 </div>
-
+</div>
 </section>
+
+<section id="about">
+<h2>About NightStar Labs</h2>
+
+<p class="about">
+NightStar Labs is a technology project focused on building real-world digital solutions.
+Starting with websites and digital setup, the goal is to develop practical experience,
+solve real problems, and grow into future work across IT, cybersecurity, automation,
+and software development.
+</p>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+
+<p class="about">
+Interested in working with NightStar Labs or following the project?
+Reach out through the official contact email.
+</p>
+
+<a href="mailto:YOUR-EMAIL-HERE" class="button">Email NightStar Labs</a>
+</section>
+
+<footer>
+<p>© 2026 NightStar Labs. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
