@@ -19,9 +19,9 @@
   --border:        rgba(255, 255, 255, 0.07);
   --border-strong: rgba(255, 255, 255, 0.11);
 
-  --text-1:        #e2e2e9;   /* primary */
-  --text-2:        #55556a;   /* secondary */
-  --text-3:        #30303d;   /* muted */
+  --text-1:        #e2e2e9;
+  --text-2:        #55556a;
+  --text-3:        #30303d;
 
   --accent:        #4f7ef8;
   --accent-glow:   rgba(79, 126, 248, 0.15);
@@ -38,9 +38,9 @@
 }
 
 /* ── SCROLLBAR ── */
-::-webkit-scrollbar         { width: 5px; }
-::-webkit-scrollbar-track   { background: var(--bg); }
-::-webkit-scrollbar-thumb   { background: var(--border-strong); border-radius: 3px; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 3px; }
 
 /* ── BASE ── */
 html {
@@ -58,13 +58,11 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  /* Subtle ambient glow — top blue, bottom right green */
   background-image:
-    radial-gradient(ellipse 70% 40% at 50% 0%,   rgba(79, 126, 248, 0.05) 0%, transparent 100%),
+    radial-gradient(ellipse 70% 40% at 50% 0%, rgba(79, 126, 248, 0.05) 0%, transparent 100%),
     radial-gradient(ellipse 50% 50% at 100% 100%, rgba(52, 211, 153, 0.03) 0%, transparent 100%);
 }
 
-/* Dot-grid texture */
 body::before {
   content: '';
   position: fixed;
@@ -123,7 +121,6 @@ body::before {
   opacity: 0.85;
 }
 
-/* Hide logo image if it fails to load */
 .nav-logo-img[src=""] {
   display: none;
 }
@@ -190,14 +187,14 @@ body::before {
   margin-bottom: 34px;
 }
 
-/* Fade-up stagger on hero children */
 .hero .container > * {
   animation: fadeUp 0.5s ease both;
 }
-.hero .label       { animation-delay: 0.00s; }
-.hero-heading      { animation-delay: 0.08s; }
-.hero-body         { animation-delay: 0.15s; }
-.hero-tags         { animation-delay: 0.21s; }
+
+.hero .label { animation-delay: 0.00s; }
+.hero-heading { animation-delay: 0.08s; }
+.hero-body { animation-delay: 0.15s; }
+.hero-tags { animation-delay: 0.21s; }
 
 .hero-tags {
   display: flex;
@@ -248,20 +245,14 @@ body::before {
 /* ============================================================
    WORK GRID
    ============================================================ */
-/*
-  Panel grid: 1px gaps between cells achieved via
-  background on the wrapper + no gap, solid bg on cells.
-  Looks like Vercel/Linear dashboard panels.
-*/
 .work-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--border);
   border-radius: var(--r);
   overflow: hidden;
-  /* gap between cells */
   gap: 1px;
-  background: var(--border); /* shows as gap color */
+  background: var(--border);
 }
 
 .work-item {
@@ -281,7 +272,6 @@ body::before {
   margin-bottom: 14px;
 }
 
-/* Status badges */
 .status {
   font-family: var(--font-mono);
   font-size: 9.5px;
@@ -413,6 +403,13 @@ body::before {
    ============================================================ */
 .contact-block {
   max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.contact-block .section-heading {
+  text-align: center;
 }
 
 .contact-body {
@@ -422,9 +419,11 @@ body::before {
   margin-top: 14px;
   margin-bottom: 22px;
   line-height: 1.75;
+  text-align: center;
 }
 
 .contact-link {
+  display: inline-block;
   font-family: var(--font-mono);
   font-size: 13px;
   color: var(--accent);
@@ -487,7 +486,6 @@ body::before {
   }
 }
 
-/* Scroll-triggered reveal (handled in script.js) */
 .reveal {
   opacity: 0;
   transform: translateY(14px);
@@ -503,9 +501,13 @@ body::before {
    RESPONSIVE
    ============================================================ */
 @media (max-width: 780px) {
-  .container { padding: 0 20px; }
+  .container {
+    padding: 0 20px;
+  }
 
-  .hero { padding: 68px 0 56px; }
+  .hero {
+    padding: 68px 0 56px;
+  }
 
   .work-grid {
     grid-template-columns: 1fr;
@@ -516,7 +518,9 @@ body::before {
     gap: 28px;
   }
 
-  .nav-links { gap: 18px; }
+  .nav-links {
+    gap: 18px;
+  }
 
   .footer-inner {
     flex-direction: column;
@@ -526,6 +530,11 @@ body::before {
 }
 
 @media (max-width: 520px) {
-  .nav-links a { font-size: 10.5px; }
-  .hero-heading { letter-spacing: -0.025em; }
+  .nav-links a {
+    font-size: 10.5px;
+  }
+
+  .hero-heading {
+    letter-spacing: -0.025em;
+  }
 }
