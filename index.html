@@ -3,201 +3,459 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>NightStar Labs</title>
-  <meta name="description" content="NightStar Labs builds websites, digital solutions, and practical technology projects." />
+  <meta name="description" content="Technology lab and engineering portfolio. Building in IT, cybersecurity, cloud, and infrastructure." />
 
-  <link rel="icon" type="image/png" href="assets/logo/nightstar-logo.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
-    rel="stylesheet"
-  >
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <header class="site-header">
-    <a class="brand" href="#">
-      <img src="assets/logo/nightstar-logo.png" alt="NightStar Labs logo">
-      <span>NightStar Labs</span>
-    </a>
 
-    <nav class="nav-links">
-      <a href="#projects">Projects</a>
-      <a href="#services">Services</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <!-- ============================
+       NAV
+       ============================ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <!--
+          Logo image is shown if it loads cleanly.
+          If your logo already contains the name "NightStar Labs",
+          remove the <span class="logo-text"> element below.
+        -->
+        <img src="assets/logo/nightstar-logo.png" alt="NightStar Labs" class="nav-logo-img" />
+        <span class="logo-text">NightStar Labs</span>
+      </a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-  <main>
-    <section class="hero">
-      <div class="hero-content">
-        <p class="eyebrow">Independent Technology Lab</p>
+  <!-- ============================
+       HERO
+       ============================ -->
+  <section class="hero">
+    <div class="container">
+      <p class="label">Technology Lab &nbsp;//&nbsp; Est. 2026</p>
+      <h1 class="hero-heading">
+        Building solutions.<br />Powering futures.
+      </h1>
+      <p class="hero-body">
+        NightStar Labs is a working technology lab and engineering portfolio.
+        The focus is on IT infrastructure, cybersecurity, cloud systems, and automation —
+        built through real projects, real problems, and documented growth.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Infrastructure</span>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Cloud</span>
+        <span class="tag">Automation</span>
+      </div>
+    </div>
+  </section>
 
-        <h1>Building websites today. Exploring technology tomorrow.</h1>
+  <!-- ============================
+       CURRENT WORK
+       ============================ -->
+  <div class="section-divider">
+    <div class="container">
+      <span class="mono-label">// current work</span>
+    </div>
+  </div>
 
-        <p class="hero-text">
-          NightStar Labs is a practical technology project focused on websites,
-          digital setup, IT, cybersecurity, automation, and real-world learning through execution.
+  <section class="section" id="work">
+    <div class="container">
+      <div class="work-grid">
+
+        <div class="work-item">
+          <div class="work-meta">
+            <span class="status status-active">Active</span>
+            <span class="work-type">Web / Infrastructure</span>
+          </div>
+          <h3 class="work-title">NightStar Labs Website</h3>
+          <p class="work-desc">
+            Building and iterating on the core platform. Learning deployment, GitHub Pages,
+            DNS configuration, and production web practices end-to-end.
+          </p>
+          <div class="work-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>GitHub Pages</span>
+          </div>
+        </div>
+
+        <div class="work-item">
+          <div class="work-meta">
+            <span class="status status-progress">In Progress</span>
+            <span class="work-type">Cybersecurity</span>
+          </div>
+          <h3 class="work-title">Security Lab Setup</h3>
+          <p class="work-desc">
+            Configuring a local lab environment for hands-on security research, network
+            traffic analysis, and vulnerability testing in isolated systems.
+          </p>
+          <div class="work-stack">
+            <span>Linux</span>
+            <span>Networking</span>
+            <span>Virtualization</span>
+          </div>
+        </div>
+
+        <div class="work-item">
+          <div class="work-meta">
+            <span class="status status-planned">Planned</span>
+            <span class="work-type">Cloud</span>
+          </div>
+          <h3 class="work-title">Cloud Infrastructure Project</h3>
+          <p class="work-desc">
+            Planning deployment of a cloud-hosted service to build real experience with
+            infrastructure-as-code, managed environments, and CI/CD pipelines.
+          </p>
+          <div class="work-stack">
+            <span>AWS / GCP</span>
+            <span>Terraform</span>
+            <span>CI/CD</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       ABOUT
+       ============================ -->
+  <div class="section-divider">
+    <div class="container">
+      <span class="mono-label">// about the lab</span>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-left">
+        <h2 class="section-heading">What this is.</h2>
+      </div>
+      <div class="about-right">
+        <p>
+          NightStar Labs is a long-term technology project, not a startup pitch.
+          It exists to document real learning, build an honest portfolio, and develop practical
+          experience across IT, cybersecurity, cloud infrastructure, and software development.
+        </p>
+        <p>
+          Every project here reflects actual work. The goal is competency —
+          skills that translate directly to engineering roles, certifications,
+          and real technical work.
         </p>
 
-        <div class="hero-actions">
-          <a class="button primary" href="#projects">View Projects</a>
-          <a class="button secondary" href="mailto:hello.nightstarlabs@gmail.com">Start a Project</a>
+        <div class="area-list">
+
+          <div class="area-row">
+            <span class="area-marker">◈</span>
+            <div>
+              <strong>Infrastructure</strong>
+              <span>Networking, servers, systems administration</span>
+            </div>
+          </div>
+
+          <div class="area-row">
+            <span class="area-marker">◈</span>
+            <div>
+              <strong>Cybersecurity</strong>
+              <span>Security research, threat analysis, defensive practices</span>
+            </div>
+          </div>
+
+          <div class="area-row">
+            <span class="area-marker">◈</span>
+            <div>
+              <strong>Cloud</strong>
+              <span>AWS / GCP / Azure, IaC, deployment pipelines</span>
+            </div>
+          </div>
+
+          <div class="area-row">
+            <span class="area-marker">◈</span>
+            <div>
+              <strong>Development</strong>
+              <span>Tooling, automation, system scripting</span>
+            </div>
+          </div>
+
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="hero-visual">
-        <div class="logo-card">
-          <img src="assets/logo/nightstar-logo.png" alt="NightStar Labs logo">
-          <p>NightStar Labs / 2026</p>
-        </div>
-      </div>
-    </section>
+  <!-- ============================
+       CONTACT
+       ============================ -->
+  <div class="section-divider">
+    <div class="container">
+      <span class="mono-label">// contact</span>
+    </div>
+  </div>
 
-    <section class="statement">
-      <p>
-        Not resume padding. Not pretending. NightStar Labs is being built through real projects,
-        practical skills, and documented progress.
+  <section class="section" id="contact">
+    <div class="container contact-block">
+      <h2 class="section-heading">Get in touch.</h2>
+      <p class="contact-body">
+        Open to collaborations, feedback, and opportunities in IT, infrastructure, or cybersecurity.
       </p>
-    </section>
-
-    <section id="projects" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Current Work</p>
-        <h2>Projects being built in public.</h2>
-      </div>
-
-      <div class="featured-project">
-        <div>
-          <p class="small-label">Active Project</p>
-          <h3>NightStar Labs Website</h3>
-          <p>
-            The first public version of the NightStar Labs brand, website, GitHub Pages deployment,
-            and long-term project foundation.
-          </p>
-        </div>
-
-        <a href="https://nightstarlabs.github.io/nightstar-labs-site/" target="_blank" rel="noopener">
-          Live Website
-        </a>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <p class="small-label">Next</p>
-          <h3>Portfolio Website Project</h3>
-          <p>A sample small-business website for a barber, tutor, restaurant, or student organization.</p>
-        </article>
-
-        <article class="card">
-          <p class="small-label">Learning Track</p>
-          <h3>Cloud & Infrastructure</h3>
-          <p>AWS learning, GitHub documentation, and future homelab infrastructure projects.</p>
-        </article>
-
-        <article class="card">
-          <p class="small-label">Future Direction</p>
-          <h3>Cybersecurity Projects</h3>
-          <p>Security labs, writeups, research, and practical technical documentation.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="services" class="section alt-section">
-      <div class="section-heading">
-        <p class="eyebrow">Services</p>
-        <h2>Simple, useful, and realistic.</h2>
-      </div>
-
-      <div class="service-list">
-        <div class="service">
-          <span>01</span>
-          <div>
-            <h3>Website Creation</h3>
-            <p>Clean responsive websites for small businesses, personal brands, and early projects.</p>
-          </div>
-        </div>
-
-        <div class="service">
-          <span>02</span>
-          <div>
-            <h3>Website Maintenance</h3>
-            <p>Updates, fixes, layout improvements, content changes, and general polish.</p>
-          </div>
-        </div>
-
-        <div class="service">
-          <span>03</span>
-          <div>
-            <h3>Digital Setup</h3>
-            <p>Domains, contact links, GitHub Pages, simple forms, and online presence setup.</p>
-          </div>
-        </div>
-
-        <div class="service">
-          <span>04</span>
-          <div>
-            <h3>Future Technology Work</h3>
-            <p>IT support, cybersecurity, automation, cloud, and software projects as the lab grows.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="roadmap" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Roadmap</p>
-        <h2>Built one step at a time.</h2>
-      </div>
-
-      <div class="card-grid">
-        <article class="card">
-          <p class="small-label">Done</p>
-          <h3>Foundation</h3>
-          <p>Name, branding, GitHub, live website, LinkedIn company page, and first redesign.</p>
-        </article>
-
-        <article class="card">
-          <p class="small-label">Now</p>
-          <h3>Portfolio Work</h3>
-          <p>Build the first sample project and document it clearly.</p>
-        </article>
-
-        <article class="card">
-          <p class="small-label">Next</p>
-          <h3>Better Systems</h3>
-          <p>Add case studies, contact form, custom domain, and stronger project pages.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="about-section">
-      <p class="eyebrow">About</p>
-      <h2>Built through execution.</h2>
-      <p>
-        NightStar Labs exists to create useful technology work now while developing the skills,
-        systems, and portfolio needed for larger opportunities in IT, cybersecurity, and digital solutions.
-      </p>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <p class="eyebrow">Contact</p>
-      <h2>Have a project idea?</h2>
-      <p>Start with a website, a digital setup, or a practical technology project.</p>
-      <a class="button primary" href="mailto:hello.nightstarlabs@gmail.com">
-        hello.nightstarlabs@gmail.com
+      <!-- Replace this email with your real one -->
+      <a href="mailto:contact@nightstarlabs.dev" class="contact-link">
+        contact@nightstarlabs.dev
       </a>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <p>© 2026 NightStar Labs. Building solutions. Powering futures.</p>
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">
+        <span class="accent-mark">◈</span> NightStar Labs
+      </span>
+      <span class="footer-copy">© 2026 — Building in public.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NightStar Labs</title>
+  <meta name="description" content="Technology lab and engineering portfolio. Building in IT, cybersecurity, cloud, and infrastructure." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=Outfit:wght@300;400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================
+       NAV
+       ============================ -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">
+        <!--
+          Logo image is shown if it loads cleanly.
+          If your logo already contains the name "NightStar Labs",
+          remove the <span class="logo-text"> element below.
+        -->
+        <img src="assets/logo/nightstar-logo.png" alt="NightStar Labs" class="nav-logo-img" />
+        <span class="logo-text">NightStar Labs</span>
+      </a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================
+       HERO
+       ============================ -->
+  <section class="hero">
+    <div class="container">
+      <p class="label">Technology Lab &nbsp;//&nbsp; Est. 2026</p>
+      <h1 class="hero-heading">
+        Building solutions.<br />Powering futures.
+      </h1>
+      <p class="hero-body">
+        NightStar Labs is a working technology lab and engineering portfolio.
+        The focus is on IT infrastructure, cybersecurity, cloud systems, and automation —
+        built through real projects, real problems, and documented growth.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Infrastructure</span>
+        <span class="tag">Cybersecurity</span>
+        <span class="tag">Cloud</span>
+        <span class="tag">Automation</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CURRENT WORK
+       ============================ -->
+  <div class="section-divider">
+    <div class="container">
+      <span class="mono-label">// current work</span>
+    </div>
+  </div>
+
+  <section class="section" id="work">
+    <div class="container">
+      <div class="work-grid">
+
+        <div class="work-item">
+          <div class="work-meta">
+            <span class="status status-active">Active</span>
+            <span class="work-type">Web / Infrastructure</span>
+          </div>
+          <h3 class="work-title">NightStar Labs Website</h3>
+          <p class="work-desc">
+            Building and iterating on the core platform. Learning deployment, GitHub Pages,
+            DNS configuration, and production web practices end-to-end.
+          </p>
+          <div class="work-stack">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>GitHub Pages</span>
+          </div>
+        </div>
+
+        <div class="work-item">
+          <div class="work-meta">
+            <span class="status status-progress">In Progress</span>
+            <span class="work-type">Cybersecurity</span>
+          </div>
+          <h3 class="work-title">Security Lab Setup</h3>
+          <p class="work-desc">
+            Configuring a local lab environment for hands-on security research, network
+            traffic analysis, and vulnerability testing in isolated systems.
+          </p>
+          <div class="work-stack">
+            <span>Linux</span>
+            <span>Networking</span>
+            <span>Virtualization</span>
+          </div>
+        </div>
+
+        <div class="work-item">
+          <div class="work-meta">
+            <span class="status status-planned">Planned</span>
+            <span class="work-type">Cloud</span>
+          </div>
+          <h3 class="work-title">Cloud Infrastructure Project</h3>
+          <p class="work-desc">
+            Planning deployment of a cloud-hosted service to build real experience with
+            infrastructure-as-code, managed environments, and CI/CD pipelines.
+          </p>
+          <div class="work-stack">
+            <span>AWS / GCP</span>
+            <span>Terraform</span>
+            <span>CI/CD</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       ABOUT
+       ============================ -->
+  <div class="section-divider">
+    <div class="container">
+      <span class="mono-label">// about the lab</span>
+    </div>
+  </div>
+
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="about-left">
+        <h2 class="section-heading">What this is.</h2>
+      </div>
+      <div class="about-right">
+        <p>
+          NightStar Labs is a long-term technology project, not a startup pitch.
+          It exists to document real learning, build an honest portfolio, and develop practical
+          experience across IT, cybersecurity, cloud infrastructure, and software development.
+        </p>
+        <p>
+          Every project here reflects actual work. The goal is competency —
+          skills that translate directly to engineering roles, certifications,
+          and real technical work.
+        </p>
+
+        <div class="area-list">
+
+          <div class="area-row">
+            <span class="area-marker">◈</span>
+            <div>
+              <strong>Infrastructure</strong>
+              <span>Networking, servers, systems administration</span>
+            </div>
+          </div>
+
+          <div class="area-row">
+            <span class="area-marker">◈</span>
+            <div>
+              <strong>Cybersecurity</strong>
+              <span>Security research, threat analysis, defensive practices</span>
+            </div>
+          </div>
+
+          <div class="area-row">
+            <span class="area-marker">◈</span>
+            <div>
+              <strong>Cloud</strong>
+              <span>AWS / GCP / Azure, IaC, deployment pipelines</span>
+            </div>
+          </div>
+
+          <div class="area-row">
+            <span class="area-marker">◈</span>
+            <div>
+              <strong>Development</strong>
+              <span>Tooling, automation, system scripting</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================
+       CONTACT
+       ============================ -->
+  <div class="section-divider">
+    <div class="container">
+      <span class="mono-label">// contact</span>
+    </div>
+  </div>
+
+  <section class="section" id="contact">
+    <div class="container contact-block">
+      <h2 class="section-heading">Get in touch.</h2>
+      <p class="contact-body">
+        Open to collaborations, feedback, and opportunities in IT, infrastructure, or cybersecurity.
+      </p>
+      <!-- Replace this email with your real one -->
+      <a href="mailto:contact@nightstarlabs.dev" class="contact-link">
+        contact@nightstarlabs.dev
+      </a>
+    </div>
+  </section>
+
+  <!-- ============================
+       FOOTER
+       ============================ -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-brand">
+        <span class="accent-mark">◈</span> NightStar Labs
+      </span>
+      <span class="footer-copy">© 2026 — Building in public.</span>
+    </div>
   </footer>
 
   <script src="script.js"></script>
