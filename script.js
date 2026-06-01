@@ -1,18 +1,16 @@
 const revealElements = document.querySelectorAll(".reveal");
 
-const revealOnScroll = new IntersectionObserver(
+const observer = new IntersectionObserver(
   entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
-        entry.target.classList.add("active");
+        entry.target.classList.add("visible");
       }
     });
   },
   {
-    threshold: 0.15
+    threshold: 0.14
   }
 );
 
-revealElements.forEach(element => {
-  revealOnScroll.observe(element);
-});
+revealElements.forEach(element => observer.observe(element));
